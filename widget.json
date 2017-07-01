@@ -1,0 +1,6 @@
+{
+  "name": "Cryptocurrency Desktop Widget",
+  "description": "Basic desktop widget for Mac to help track the price of bitcoin and ethereum but can also be used for all coins supported by cryptocompare's awesome API (www.cryptocompare.com). Inspired by Adam Courtemanche's widget Simple Stocks.",
+  "author": "Sebastian Stiernborg",
+  "email": "sebastian@tmhr.se"
+}
