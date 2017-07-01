@@ -1,0 +1,2 @@
+# cryptowidget
+Cryptocurrency Desktop Widget
