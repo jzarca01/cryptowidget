@@ -85,7 +85,8 @@ update: (output, domEl) ->
     label = ccur[i]
     price = data[i][currency]['PRICE']
     change = data[i][currency]['CHANGEPCT24HOUR']
-    state = if (change.charAt(0) == '+') then 'pos' else 'neg'
+    state = if (change.charAt(0) == '-') then 'neg' else 'pos'
     if i % 2 == 0
       table.append "<tr/>"
     table.find("tr:last").append renderCurrency(label, price, change, state)
+
