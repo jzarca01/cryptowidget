@@ -10,10 +10,10 @@ currency = 'USD'
 req = ccur.join(", ")
 command: "curl -s 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=#{ccur}&tsyms=#{currency}'"
 
-refreshFrequency: 100000
+refreshFrequency: 10000
 
 style: """
-  top: 20px
+  bottom:60px
   right: 0px
   color: #fff
   font-family: Helvetica Neue
@@ -59,12 +59,16 @@ style: """
 
 
 render: -> """
-  <table><tr><td>Network Error</td></tr></table>
+  <table><tr><td>Loading...</td></tr></table>
 """
 
 
 update: (output, domEl) ->
-  res = JSON.parse(output)
+  try
+    res = JSON.parse(output)
+  catch e
+    return
+
   data = Object.keys(res.DISPLAY).map((k) -> res.DISPLAY[k])
   console.log data
   table  = $(domEl).find('table')
@@ -89,4 +93,3 @@ update: (output, domEl) ->
     if i % 2 == 0
       table.append "<tr/>"
     table.find("tr:last").append renderCurrency(label, price, change, state)
-
