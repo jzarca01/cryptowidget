@@ -1,9 +1,9 @@
 
 # From CryptoCurrency. Add or remove. 40+ supportet coins, check here: https://www.cryptocompare.com/api/data/coinlist/
-ccur = ['BTC', 'ETH', 'XRP', 'DASH',]
+ccur = ['BTC', 'ETH', 'XRP', 'LTC','XVG', 'EOS', 'NEO']
 
 #To Currency
-currency = 'USD'
+currency = 'EUR'
 
 # Made possibly with Cryptocompares API (www.cryptocompare.com)
 
@@ -13,8 +13,8 @@ command: "curl -s 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=#
 refreshFrequency: 10000
 
 style: """
-  bottom:60px
-  right: 0px
+  top:10px
+  left: 0px
   color: #fff
   font-family: Helvetica Neue
 
@@ -90,6 +90,6 @@ update: (output, domEl) ->
     price = data[i][currency]['PRICE']
     change = data[i][currency]['CHANGEPCT24HOUR']
     state = if (change.charAt(0) == '-') then 'neg' else 'pos'
-    if i % 2 == 0
+    if i % 3 == 0
       table.append "<tr/>"
     table.find("tr:last").append renderCurrency(label, price, change, state)
