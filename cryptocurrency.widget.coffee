@@ -1,9 +1,9 @@
 
 # From CryptoCurrency. Add or remove. 40+ supportet coins, check here: https://www.cryptocompare.com/api/data/coinlist/
-ccur = ['BTC', 'ETH', 'XRP', 'LTC','XVG', 'EOS', 'NEO']
+ccur = ['BTC', 'ETH', 'XRP', 'LTC','XVG', 'EOS', 'NEO', 'XMR']
 
 #To Currency
-currency = 'EUR'
+currency = 'USD'
 
 # Made possibly with Cryptocompares API (www.cryptocompare.com)
 
@@ -14,7 +14,7 @@ refreshFrequency: 10000
 
 style: """
   top:10px
-  left: 0px
+  left: 10px
   color: #fff
   font-family: Helvetica Neue
 
