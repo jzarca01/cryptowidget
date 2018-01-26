@@ -2,7 +2,6 @@
 
 ## What the fork ?
 
-Prices are now in Euros, previously Dollars
 Widget is now in top left of the screen, previous bottom right
 Widget shows now 3 currencies on each line, previously 2
 
